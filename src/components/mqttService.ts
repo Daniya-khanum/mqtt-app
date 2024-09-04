@@ -12,10 +12,9 @@ class MQTTServiceImpl implements MQTTService {
   client: MqttClient | null = null;
 
   connect(host: string, port: number, username: string, password: string) {
-    console.log("host",host)
+    const url = `ws://${host}:${port}/mqtt`; // Adjust if using WebSocket
+    console.log("Connecting to URL:", url);
 
-    const url = `mqtt://${host}:${port}`; // Adjust if using WebSocket
-    console.log("url",url)
     this.client = mqtt.connect(url, {
       username,
       password,
