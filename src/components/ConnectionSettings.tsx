@@ -6,7 +6,7 @@ import { InputText } from 'primereact/inputtext';
 
 const ConnectionSettings: React.FC<{ onConnect: () => void }> = ({ onConnect }) => {
     const [host, setHost] = useState<string>('');
-    const [port, setPort] = useState<string>('1883'); // Changed to string
+    const [port, setPort] = useState<string>('');
     const [username, setUsername] = useState<string>('');
     const [password, setPassword] = useState<string>('');
   
